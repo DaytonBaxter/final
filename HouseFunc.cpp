@@ -67,4 +67,14 @@ void houseMarketValues(vector<HousePrice> &hp)
 void houseMarketPerState(vector<HousePrice> &hp)
 {
     // Sort by State
+    struct {
+        bool operator()(int a, int b) const
+        {
+            return a < b;
+        }
+    } customLess;
+    std::sort(hp.begin(), hp.end(), customLess);
+    for (auto a : hp) {
+        std::cout << a << " ";
+    }
 }
