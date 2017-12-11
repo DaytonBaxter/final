@@ -25,7 +25,7 @@ void readCSV(const string fileIn,vector<HousePrice>& hp)
 {
     io::CSVReader<7> in("MOCK_DATA.csv");
     in.read_header(io::ignore_extra_column, "id", "number", "street", "city", "state", "postalCode", "price");
-    std::int id;
+    int id;
     int number;
     string street;
     string city;
